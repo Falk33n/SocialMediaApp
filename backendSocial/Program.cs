@@ -15,9 +15,9 @@ public class Program
         // e.g., builder.Services.AddDbContext<MyDbContext>();
 
         // Register PostService and its dependency
-        builder.Services.AddDbContext<PostDbContext>();
-        builder.Services.AddTransient<PostService, PostService>();
-        builder.Services.AddTransient<IPostRepository, PostRepository>();
+        builder.Services.AddDbContext<BlogPostDbContext>();
+        builder.Services.AddTransient<BlogPostService, BlogPostService>();
+        builder.Services.AddTransient<IBlogPostRepository, BlogPostRepository>();
 
         var app = builder.Build();
 

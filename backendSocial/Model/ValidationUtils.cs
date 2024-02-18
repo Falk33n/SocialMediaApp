@@ -2,9 +2,9 @@
 {
     public static class ValidationUtils
     {
-        public static bool IsValid(Post post)
+        public static bool IsValid(BlogPost blogPost)
         {
-            return !string.IsNullOrEmpty(post.Title) && !string.IsNullOrEmpty(post.Author) && !string.IsNullOrEmpty(post.Content);
+            return !string.IsNullOrEmpty(blogPost.Title) && !string.IsNullOrEmpty(blogPost.Author) && !string.IsNullOrEmpty(blogPost.Content);
         }
     }
 }

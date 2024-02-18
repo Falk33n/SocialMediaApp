@@ -2,23 +2,23 @@
 
 namespace backendSocial.Model
 {
-    public class PostRepository : IPostRepository
+    public class BlogPostRepository : IBlogPostRepository
     {
-        private readonly PostDbContext _context;
+        private readonly BlogPostDbContext _context;
 
-        public PostRepository(PostDbContext context)
+        public BlogPostRepository(BlogPostDbContext context)
         {
             _context = context;
         }
 
-        public void CreatePost(Post post)
+        public void CreatePost(BlogPost blogPost)
         {
-            if (!ValidationUtils.IsValid(post))
+            if (!ValidationUtils.IsValid(blogPost))
             {
                 throw new InvalidPostException("Title, Author, and Content are required fields.");
             }
 
-            _context.Post.Add(post);
+            _context.BlogPost.Add(blogPost);
             try
             {
                 _context.SaveChanges();
@@ -29,11 +29,11 @@ namespace backendSocial.Model
             }
         }
 
-        public List<Post> ReadAllPosts()
+        public List<BlogPost> ReadAllPosts()
         {
             try
             {
-                return _context.Post.OrderByDescending(p => p.DateCreated).ToList();
+                return _context.BlogPost.OrderByDescending(p => p.DateCreated).ToList();
             }
             catch (DbException ex)
             {
@@ -41,9 +41,9 @@ namespace backendSocial.Model
             }
         }
 
-        public Post ReadPostById(int id)
+        public BlogPost ReadPostById(int id)
         {
-            var post = _context.Post.Find(id);
+            var post = _context.BlogPost.Find(id);
             if (post == null)
             {
                 throw new PostNotFoundException($"Post with ID {id} not found.");
@@ -51,17 +51,17 @@ namespace backendSocial.Model
             return post;
         }
 
-        public void UpdatePost(Post post)
+        public void UpdatePost(BlogPost blogPost)
         {
-            var existingPost = _context.Post.Find(post.Id);
+            var existingPost = _context.BlogPost.Find(blogPost);
             if (existingPost == null)
             {
-                throw new PostNotFoundException($"Post with ID {post.Id} not found for update.");
+                throw new PostNotFoundException($"Post with ID {blogPost.Id} not found for update.");
             }
 
-            existingPost.Title = post.Title;
-            existingPost.Author = post.Author;
-            existingPost.Content = post.Content;
+            existingPost.Title = blogPost.Title;
+            existingPost.Author = blogPost.Author;
+            existingPost.Content = blogPost.Content;
 
             try
             {
@@ -75,13 +75,13 @@ namespace backendSocial.Model
 
         public void DeletePost(int id)
         {
-            var post = _context.Post.Find(id);
+            var post = _context.BlogPost.Find(id);
             if (post == null)
             {
                 throw new PostNotFoundException($"Post with ID {id} not found for deletion.");
             }
 
-            _context.Post.Remove(post);
+            _context.BlogPost.Remove(post);
 
             try
             {

@@ -3,22 +3,22 @@
 namespace backendSocial.Model
 {
     [Route("api/[controller]")]
-    public class PostController : ControllerBase
+    public class BlogPostController : ControllerBase
     {
-        private readonly PostService _postService;
+        private readonly BlogPostService _blogPostService;
 
-        public PostController(PostService postService)
+        public BlogPostController(BlogPostService blogPostService)
         {
-            _postService = postService;
+            _blogPostService = blogPostService;
         }
 
         [HttpPost]
-        public IActionResult CreatePost([FromBody] Post post)
+        public IActionResult CreatePost([FromBody] BlogPost blogPost)
         {
             try
             {
-                _postService.CreatePost(post);
-                return CreatedAtRoute("GetPost", new { id = post.Id }, post);
+                _blogPostService.CreatePost(blogPost);
+                return CreatedAtRoute("GetPost", new { id = blogPost.Id }, blogPost);
             }
             catch (ValidationException ex)
             {
@@ -35,7 +35,7 @@ namespace backendSocial.Model
         {
             try
             {
-                var posts = _postService.ReadAllPosts();
+                var posts = _blogPostService.ReadAllPosts();
                 return Ok(posts);
             }
             catch (DataAccessException ex)
@@ -49,7 +49,7 @@ namespace backendSocial.Model
         {
             try
             {
-                var post = _postService.ReadPostById(id);
+                var post = _blogPostService.ReadPostById(id);
                 if (post == null)
                 {
                     return NotFound(new { message = $"Post with ID {id} not found." });
@@ -63,16 +63,16 @@ namespace backendSocial.Model
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdatePost(int id, [FromBody] Post post)
+        public IActionResult UpdatePost(int id, [FromBody] BlogPost blogPost)
         {
-            if (id != post.Id)
+            if (id != blogPost.Id)
             {
                 return BadRequest(new { message = "Post ID in URL and body must match." });
             }
 
             try
             {
-                _postService.UpdatePost(post);
+                _blogPostService.UpdatePost(blogPost);
                 return NoContent();
             }
             catch (ValidationException ex)
@@ -90,7 +90,7 @@ namespace backendSocial.Model
         {
             try
             {
-                _postService.DeletePost(id);
+                _blogPostService.DeletePost(id);
                 return NoContent();
             }
             catch (DataAccessException ex)

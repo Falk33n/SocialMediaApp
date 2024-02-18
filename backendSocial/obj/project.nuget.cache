@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lT619ep+yec8CPYcb/NhkN5YSEw8m1ehbJ8ep3zG3HnRxjkTHHBJZsfJBGK/Fa5hiw+KQ9YwewD/vcc6Y6F3kA==",
+  "dgSpecHash": "4KAHF0saJTUMCI5Blzpg6C9u6peAuJF00Qg9vr1hTW8XCeRuFAASAlyz/VHjgeAONa5DI8uruKg7LpzKwbsxHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\backendSocial.csproj",
+  "projectFilePath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\backendSocial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiiim\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\tiiim\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

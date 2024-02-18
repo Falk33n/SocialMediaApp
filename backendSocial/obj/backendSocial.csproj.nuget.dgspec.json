@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\backendSocial.csproj": {}
+    "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\backendSocial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\backendSocial.csproj": {
+    "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\backendSocial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\backendSocial.csproj",
+        "projectUniqueName": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\backendSocial.csproj",
         "projectName": "backendSocial",
-        "projectPath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\backendSocial.csproj",
+        "projectPath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\backendSocial.csproj",
         "packagesPath": "C:\\Users\\tiiim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\backendSocial\\backendSocial\\obj\\",
+        "outputPath": "C:\\Users\\tiiim\\OneDrive\\Skrivbord\\Mapp\\Egna Projekt\\GitHub\\SocialMediaApp\\backendSocial\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
