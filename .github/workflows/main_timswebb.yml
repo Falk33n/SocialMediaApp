@@ -22,7 +22,7 @@ jobs:
           dotnet-version: "8.x"
           include-prerelease: true
 
-        - name: Print working directory
+      - name: Print working directory
         run: echo $PWD
 
       - name: Build with dotnet
