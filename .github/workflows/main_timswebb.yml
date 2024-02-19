@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release backendSocial.csproj
 
       - name: dotnet publish
-        run: run: dotnet publish -c Release --build /p:Configuration=Release backendSocial.csproj
+        run: run: dotnet publish -c Release backendSocial.csproj
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
